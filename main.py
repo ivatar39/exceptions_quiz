@@ -52,12 +52,61 @@ def convert_lines_to_questions(processed_lines):
     return converted_questions
 
 
+def end_test():
+    pass
+
+
+def choose_answer():
+    pass
+
+
 def start_program():
+    # Окно тестирования
     main_window = Toplevel(root)
     main_window.minsize(width=450, height=600)
     # Главный фрэйм приложения
     app_frame = Frame(main_window)
     app_frame.pack()
+    # Верхняя область
+    app_bar_frame = Frame(app_frame)
+    app_bar_frame.pack(side=TOP)
+    countdown_text_label = Label(app_bar_frame, text='Время до завершения попытки: ')
+    countdown_text_label.pack(side=LEFT, anchor=W, expand=1)
+    countdown_time = '0:59'
+    countdown_label = Label(app_bar_frame, text=countdown_time)
+    countdown_label.pack(side=LEFT)
+    end_test_button = Button(app_bar_frame, text='Завершить попытку', width=30, height=4, command=lambda: end_test())
+    end_test_button.pack(side=RIGHT, anchor=E)
+
+    # Область теста
+    app_quiz_frame = Frame(app_frame)
+    app_quiz_frame.pack(side=BOTTOM)
+
+    question_text = 'Текст вопроса 1'
+    question_label = Label(app_quiz_frame, text=question_text)
+    question_label.pack(side=TOP, pady=17)
+
+    answer_1_button = Button(app_quiz_frame, text='Вариант 1', width=30, height=4, command=lambda: choose_answer())
+    answer_1_button.pack(side=TOP)
+    answer_2_button = Button(app_quiz_frame, text='Вариант 2', width=30, height=4, command=lambda: choose_answer())
+    answer_2_button.pack(side=TOP)
+    answer_3_button = Button(app_quiz_frame, text='Вариант 3', width=30, height=4, command=lambda: choose_answer())
+    answer_3_button.pack(side=TOP)
+    answer_4_button = Button(app_quiz_frame, text='Вариант 4', width=30, height=4, command=lambda: choose_answer())
+    answer_4_button.pack(side=TOP)
+    # Нижняя область
+    app_bottom_frame = Frame(app_quiz_frame)
+    app_bottom_frame.pack(side=BOTTOM)
+
+    question_count_label = Label(app_bottom_frame, text='Вопрос 1 из 10')
+    question_count_label.pack(side=LEFT, anchor=W, expand=1)
+
+    student_info_frame = Frame(app_bottom_frame)
+    student_info_frame.pack(side=RIGHT)
+    name_text_label = Label(student_info_frame, text='Имя - Иванов')
+    name_text_label.pack(side=TOP)
+    group_text_label = Label(student_info_frame, text='Группа - 19-ИЭ-2')
+    group_text_label.pack(side=BOTTOM)
 
 
 # Главное Приложение, запуск стартового экрана
