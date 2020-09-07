@@ -2,28 +2,10 @@
 Прерывание (interrupt) – это;сигнал, заставляющий ЭВМ менять обычный порядок выполнения команд процессором;разновидность управляющей конструкции в высокоуровневых языках программирования, предназначенная для организации многократного исполнения набора инструкций;оператор условия во многих языках программирования;пронумерованная последовательность величин одинакового типа
 Какое исключение НЕ относится к стандартному списку исключений, актуальному для python 3.3.;EfficiencyError;ArithmeticError;FileNotFoundError;UnicodeError
 Какие кодовые слова используются для обработки исключений?;try, except, else, finally, raise;try, catch, else, finally;try, catch, if, else, finally;try, except, raise
-"Что выведет программа?
-
-try:
-    k = 1 / 0
-except ZeroDivisionError:
-    k = 0
-print(k)";0;ZeroDivisionError: division by zero;Ничего;"Traceback (most recent call last):                                                                                          
-  File ""main.py"", line 2, in <module>                                                                                       
-    k = 1/0                                                                                                              
-ZeroDivisionError: division by zero   "
+"Для чего нужна команда ""assert""?";Удостовериться в верности выражения;Проверить код на наличие ошибок;Изменить ход проверки исключений;Исполнить исключение для определённой функции
 Какой порядок исполнения блоков исключения?;try, except, else, finally;try, else, except;try, finally, except;try, except, finally, else
-"Какое исключение будет задействовано при исполнении программы?
-Int(""A"")";ValueError;TypeError;AttributeError;UnicodeError
+"Какое исключение будет задействовано при исполнении программы? Int(""A"")";ValueError;TypeError;AttributeError;UnicodeError
 Как вызвать собственно заданное исключение?;"raise SyntaxError(""Ошибка!"")";"throws SyntaxError(""Ошибка!"")";"raise SyntaxError = ""Ошибка!""";"raise(SyntaxError, ""Ошибка!"")"
-"Что выведет программа?
-
-try:
-    x = int(""четыре"")
-    print(x)
-except ValueError as e:
-    print(""Ошибка: "", e)";Ошибка: invalid literal for int() with base 10: 'четыре';4;четыре;Ошибка: 
-"Что выведет программа?
-
-print('test' + 2)";TypeError: Can't convert 'int' object to str implicitly;test2;Ничего;TypeError: must be str, not int
+Какой блок обязателен для обработки исключения?;except;finally;else;raise
+Что выведет программа? print('test' + 2);TypeError: Can't convert 'int' object to str implicitly;test2;Ничего;TypeError: must be str, not int
 Обрабо́тка исключи́тельных ситуа́ций (англ. exception handling) — это;механизм языков программирования, предназначенный для описания реакции программы на ошибки и другие возможные проблемы, которые могут возникнуть при выполнении программы;этап разработки компьютерной программы, на котором обнаруживают, локализуют и устраняют ошибки;фрагмент программного кода, к которому можно обратиться из другого места программы;в объектно-ориентированном программировании, представляет собой шаблон для создания объектов, обеспечивающий начальные значения состояний
