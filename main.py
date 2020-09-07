@@ -63,8 +63,6 @@ def choose_answer(main_window, student, current_index, answers, countdown_time):
     for children in main_window.winfo_children():
         children.destroy()
 
-    for answer in answers:
-        print(answer.text, answer.is_right)
     if current_index >= len(questions) - 1:
         main_window.destroy()
         quiz_result(student, answers, countdown_time)
